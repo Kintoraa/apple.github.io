@@ -1,0 +1,83 @@
+.section3 {
+    padding: 10px;
+    
+    .section3-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 10px;
+        color: $white;
+    
+
+        >  div{
+            height: 624px;
+            padding: 70px 0;
+
+            h2 {
+                margin-bottom: -20px;
+                font-size: 2rem;
+                font-family: $font1;
+                font-weight: 800;
+            }
+
+            h4 {
+                font-size: 1.2rem;
+            }
+        }
+
+        .section3-1 {
+            color: $black;
+            background: url(../img/section4.jpeg) center/cover;
+            a {
+                color: $blue2;
+            }
+        }
+
+        .section3-2 {
+            background: url(../img/section5.jpeg) center/cover;
+
+        }
+        .section3-3 {
+            background: url(../img/section6.jpeg) center/cover;
+        }
+        .section3-4 {
+            background: url(../img/section7.jpeg) center/cover;
+        }
+        .section3-5 {
+            color: $black;
+            background: url(../img/section8.jpeg) center/cover;
+            
+     
+           .liens{
+
+            a:nth-child(3){
+                position: relative;
+                color: $blue2;
+
+               &::after{
+                content: "1";
+                top: 0;
+                right: -6px;
+                position: absolute;
+                font-size: 0.70rem;
+               }
+                       
+
+            }
+
+            i:last-child{
+                font-size: 1.1rem;
+               }
+        }
+
+            
+        }
+        .section3-6 {
+            background: url(../img/section9.jpeg) center/cover;
+
+            h2 {
+                line-height: 45px;
+            }
+        }
+    }
+}

@@ -1,0 +1,122 @@
+footer {
+    background: #F4F4F7;
+    padding: 20px;
+    margin-top: 20px;
+
+    .footer-content {
+        text-align: left;
+        font-size: 0.7rem;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0px 20px;
+        
+        
+
+        .mention {
+            position: relative;
+            padding-bottom: 15px;
+           
+           color: rgb(111,111,115);
+
+           p:first-child {
+                margin-left: 10px;
+               
+            }
+
+            p {
+                line-height: 20px;
+            }
+            
+            &::after {
+                content: "";
+                height: 1px;
+                width: 100%;
+                position: absolute;
+                background: rgba(168, 163, 163, 0.61);
+                bottom: 0;
+            }
+
+            
+        }
+
+        .footer-infos {
+            padding: 15px 0;
+            position: relative;
+            color: $grey2;
+            .footer-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                line-height: 22px;
+
+                ul {
+                    padding-bottom: 20px;
+                }
+
+                h6 {
+                    font-size: 0.75rem;
+                    font-family: $font2;
+                    font-weight: 900;
+                    color:rgb(41,41,42);
+                   
+                }
+
+                &::before {
+                    content: "";
+                    height: 1px;
+                    width: 100%;
+                    position: absolute;
+                    background: rgba(168, 163, 163, 0.61);
+                    bottom: 5px;
+                }
+
+
+            }
+
+            span {
+                color: $blue2;
+                text-decoration: underline;
+                
+            }
+        }
+
+
+    }
+
+    .footer-copyright {
+        text-align: left;
+        color: $grey2;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0px 20px;
+        position: relative;
+
+        p {
+            margin-bottom: 8px;
+            font-size: 0.6rem
+            
+        }
+
+        ul {
+            @include centerChild(space-between);
+            font-size: 0.74rem;
+            width: 90%;
+        }
+        li{
+
+            border-right: solid 1px;
+            padding-right: 8px;
+
+        }
+
+        .country {
+           
+            a {
+                color: $grey2;
+                position: absolute;
+                top: 0;
+                right: 20px;
+                font-size: 0.74rem;
+            }
+        }
+    }
+}

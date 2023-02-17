@@ -10,9 +10,9 @@ nav {
         grid-template-columns: 10% 80% 10%;
         max-width: 1400px;
         margin: 0 auto;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         color: $white;
-        font-family: $font3;   
+        font-family: $font2;   
         height: 44px;
         letter-spacing: 1px
           
@@ -20,6 +20,7 @@ nav {
 
     ul {
         @include centerChild(space-between);
+      
         
     }
 

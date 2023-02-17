@@ -1,14 +1,18 @@
 @font-face {
-  font-family: "PoppinsB";
-  src: url(../fonts/Poppins-Bold.ttf);
+  font-family: "RobotoB";
+  src: url(../fonts/Roboto-Bold.ttf);
 }
 @font-face {
-  font-family: "PoppinsL";
-  src: url(../fonts/Poppins-Light.ttf);
+  font-family: "RobotoL";
+  src: url(../fonts/Roboto-Light.ttf);
 }
 @font-face {
-  font-family: "PoppinsEL";
-  src: url(../fonts/Poppins-ExtraLight.ttf);
+  font-family: "RobotoM";
+  src: url(../fonts/Roboto-Medium.ttf);
+}
+@font-face {
+  font-family: "RobotoR";
+  src: url(../fonts/Roboto-Regular.ttf);
 }
 * {
   margin: 0;
@@ -26,27 +30,18 @@ i {
 }
 
 body {
-  font-family: "PoppinsL", serif;
+  font-family: "RobotoR", serif;
   text-align: center;
 }
 
 a {
   text-decoration: none;
-  color: rgb(38, 121, 216);
+  color: #2997ff;
   position: relative;
   font-size: 1.1rem;
 }
-a:hover::after {
-  content: "";
-  height: 1px;
-  position: absolute;
-  background: rgb(38, 121, 216);
-  width: 87%;
-  left: 0;
-  bottom: 2px;
-}
-a i {
-  font-size: 0.7rem;
+a:hover {
+  text-decoration: underline;
 }
 
 h6 {
@@ -54,8 +49,12 @@ h6 {
 }
 
 .liens a {
-  margin: 80px 20px;
-  font-family: "PoppinsL", serif;
+  margin: 80px 10px;
+  font-family: "RobotoL", serif;
+}
+.liens i {
+  color: #2997ff;
+  font-size: 0.7rem;
 }
 
 .header-text {
@@ -64,15 +63,12 @@ h6 {
   height: 300px;
 }
 .header-text h2 {
-  font-family: "PoppinsB", serif;
   font-size: 2.8rem;
-  letter-spacing: 1px;
 }
 .header-text h4 {
   font-size: 1.5rem;
   font-weight: 500;
-  padding: 10px 0;
-  letter-spacing: 1px;
+  padding: 20px 0;
 }
 
 nav {
@@ -88,9 +84,9 @@ nav .nav-content {
   grid-template-columns: 10% 80% 10%;
   max-width: 1400px;
   margin: 0 auto;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: white;
-  font-family: "PoppinsEL", serif;
+  font-family: "RobotoL", serif;
   height: 44px;
   letter-spacing: 1px;
 }
@@ -121,10 +117,10 @@ header {
   padding: 90px 0;
 }
 header h1 {
-  font-family: "PoppinsB", serif;
+  font-family: "RobotoB", serif;
   font-size: 2.8rem;
   font-weight: 500;
-  margin-bottom: -20px;
+  margin-bottom: -15px;
 }
 
 .section1 {
@@ -132,6 +128,12 @@ header h1 {
   height: 700px;
   padding: 90px 0;
   margin: 0 0 10px 0;
+}
+.section1 h2 {
+  margin-bottom: -15px;
+}
+.section1 a {
+  color: #06c;
 }
 
 .section2 {
@@ -142,13 +144,192 @@ header h1 {
 }
 .section2 .header-text h2 {
   text-transform: uppercase;
-  margin-bottom: -10px;
+  font-size: 2.5rem;
+}
+.section2 .header-text h2 i {
+  font-size: 3rem;
 }
 .section2 .header-text h6 {
   text-transform: uppercase;
   color: rgb(255, 0, 0);
+  font-size: 1.1rem;
+  letter-spacing: 3px;
+  font-family: "RobotoB", serif;
+  margin-left: 25px;
+}
+.section2 .header-text h4 {
+  margin-left: 20px;
+}
+
+.section3 {
+  padding: 10px;
+}
+.section3 .section3-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px;
+  color: white;
+}
+.section3 .section3-grid > div {
+  height: 624px;
+  padding: 70px 0;
+}
+.section3 .section3-grid > div h2 {
+  margin-bottom: -20px;
+  font-size: 2rem;
+  font-family: "RobotoB", serif;
+  font-weight: 800;
+}
+.section3 .section3-grid > div h4 {
   font-size: 1.2rem;
-  letter-spacing: 2px;
-  font-family: "PoppinsB", serif;
-  font-weight: 0;
+}
+.section3 .section3-grid .section3-1 {
+  color: black;
+  background: url(../img/section4.jpeg) center/cover;
+}
+.section3 .section3-grid .section3-1 a {
+  color: #06c;
+}
+.section3 .section3-grid .section3-2 {
+  background: url(../img/section5.jpeg) center/cover;
+}
+.section3 .section3-grid .section3-3 {
+  background: url(../img/section6.jpeg) center/cover;
+}
+.section3 .section3-grid .section3-4 {
+  background: url(../img/section7.jpeg) center/cover;
+}
+.section3 .section3-grid .section3-5 {
+  color: black;
+  background: url(../img/section8.jpeg) center/cover;
+}
+.section3 .section3-grid .section3-5 .liens a:nth-child(3) {
+  position: relative;
+  color: #06c;
+}
+.section3 .section3-grid .section3-5 .liens a:nth-child(3)::after {
+  content: "1";
+  top: 0;
+  right: -6px;
+  position: absolute;
+  font-size: 0.7rem;
+}
+.section3 .section3-grid .section3-5 .liens i:last-child {
+  font-size: 1.1rem;
+}
+.section3 .section3-grid .section3-6 {
+  background: url(../img/section9.jpeg) center/cover;
+}
+.section3 .section3-grid .section3-6 h2 {
+  line-height: 45px;
+}
+
+.section4 {
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
+  height: 550px;
+  gap: 20px;
+}
+.section4 .background-left {
+  background: url(../img/footer2.jpeg) center/cover;
+}
+.section4 .background-center {
+  background: url(../img/footer1.jpeg) center/cover;
+}
+.section4 .background-right {
+  background: url(../img/footer3.jpeg) center/cover;
+}
+
+footer {
+  background: #F4F4F7;
+  padding: 20px;
+  margin-top: 20px;
+}
+footer .footer-content {
+  text-align: left;
+  font-size: 0.7rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+footer .footer-content .mention {
+  position: relative;
+  padding-bottom: 15px;
+  color: rgb(111, 111, 115);
+}
+footer .footer-content .mention p:first-child {
+  margin-left: 10px;
+}
+footer .footer-content .mention p {
+  line-height: 20px;
+}
+footer .footer-content .mention::after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  background: rgba(168, 163, 163, 0.61);
+  bottom: 0;
+}
+footer .footer-content .footer-infos {
+  padding: 15px 0;
+  position: relative;
+  color: rgb(97, 97, 100);
+}
+footer .footer-content .footer-infos .footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  line-height: 22px;
+}
+footer .footer-content .footer-infos .footer-grid ul {
+  padding-bottom: 20px;
+}
+footer .footer-content .footer-infos .footer-grid h6 {
+  font-size: 0.75rem;
+  font-family: "RobotoL", serif;
+  font-weight: 900;
+  color: rgb(41, 41, 42);
+}
+footer .footer-content .footer-infos .footer-grid::before {
+  content: "";
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  background: rgba(168, 163, 163, 0.61);
+  bottom: 5px;
+}
+footer .footer-content .footer-infos span {
+  color: #06c;
+  text-decoration: underline;
+}
+footer .footer-copyright {
+  text-align: left;
+  color: rgb(97, 97, 100);
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0px 20px;
+  position: relative;
+}
+footer .footer-copyright p {
+  margin-bottom: 8px;
+  font-size: 0.6rem;
+}
+footer .footer-copyright ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.74rem;
+  width: 90%;
+}
+footer .footer-copyright li {
+  border-right: solid 1px;
+  padding-right: 8px;
+}
+footer .footer-copyright .country a {
+  color: rgb(97, 97, 100);
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-size: 0.74rem;
 }/*# sourceMappingURL=index.css.map */

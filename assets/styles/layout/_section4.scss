@@ -1,0 +1,20 @@
+.section4 {
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    height: 550px;
+    gap: 20px;
+
+    .background-left {
+        background: url(../img/footer2.jpeg) center/cover;
+    }
+
+    .background-center {
+        background: url(../img/footer1.jpeg) center/cover;
+    }
+
+    .background-right {
+        background: url(../img/footer3.jpeg) center/cover;
+    }
+
+
+}

@@ -1,25 +1,34 @@
 @font-face {
-    font-family: "PoppinsB";
-    src: url(../fonts/Poppins-Bold.ttf);
+    font-family: "RobotoB";
+    src: url(../fonts/Roboto-Bold.ttf);
 }
 
 @font-face {
-    font-family: "PoppinsL";
-    src: url(../fonts/Poppins-Light.ttf);
+    font-family: "RobotoL";
+    src: url(../fonts/Roboto-Light.ttf);
 }
 
 @font-face {
-    font-family: "PoppinsEL";
-    src: url(../fonts/Poppins-ExtraLight.ttf);
+    font-family: "RobotoM";
+    src: url(../fonts/Roboto-Medium.ttf);
 }
 
-$font1: "PoppinsB", serif; 
-$font2: "PoppinsL", serif;
-$font3: "PoppinsEL", serif;
+@font-face {
+    font-family: "RobotoR";
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+$font1: "RobotoB", serif; 
+$font2: "RobotoL", serif;
+$font3: "RobotoM", serif;
+$font4: "RobotoR", serif;
 $white: white;
 $black: black;
 $grey: rgb(157,156,161);
-$blue: rgb(38, 121, 216);
+$blue: #2997ff;
+$blue2: #06c;
+$grey2: rgb(97,97,100);
+
 
 @mixin centerChild ($space){
 display: flex;
@@ -42,11 +51,13 @@ li {
 
 i {
     cursor: pointer;
+    
 }
 
 body {
-    font-family: $font2;
+    font-family: $font4;
     text-align: center;
+   
 }
 
 
@@ -58,25 +69,12 @@ a {
 
 
  &:hover {
-  
-    &::after {
-        content: "";
-        height: 1px;
-        position: absolute;
-        background: $blue;
-        width: 87%;
-        left: 0;
-        bottom: 2px;
+      text-decoration: underline;
         
-}
- }
 
- i {
-    font-size: 0.7rem;
  }
 
 }
-
 
 
 h6 {
@@ -86,9 +84,14 @@ h6 {
 
 .liens {
 a {
-    margin: 80px 20px;
+    margin: 80px 10px;
     font-family: $font2;
 
+}
+
+i {
+    color: $blue;
+    font-size: 0.7rem;
 }
 
 }
@@ -100,18 +103,15 @@ a {
     height: 300px;
 
     h2 {
-        font-family: $font1;
         font-size: 2.8rem;
-        letter-spacing: 1px;
+    
     }
    
     h4 {
         font-size: 1.5rem;
         font-weight: 500;    
-        padding: 10px 0;
-        letter-spacing: 1px;
-    
-        
+        padding: 20px 0;
+            
     }
 
  }
