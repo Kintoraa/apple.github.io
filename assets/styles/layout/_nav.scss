@@ -1,0 +1,39 @@
+nav {
+    background: #161616a1;
+    backdrop-filter: blur(50px);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    .nav-content {
+        display: grid;
+       
+        grid-template-columns: 10% 80% 10%;
+        max-width: 1400px;
+        margin: 0 auto;
+        font-size: 0.8rem;
+        color: $white;
+        font-family: $font3;   
+        height: 44px;
+        letter-spacing: 1px
+          
+    }
+
+    ul {
+        @include centerChild(space-between);
+        
+    }
+
+    .nav-left {
+        @include centerChild(center);
+        font-size: 1.1rem;
+    }
+
+    .nav_right {
+        @include centerChild(space-evenly);
+
+      i {
+        font-size: 0.8rem;
+      }
+    }
+    
+}
