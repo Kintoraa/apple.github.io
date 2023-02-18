@@ -261,8 +261,6 @@ header h1 {
 }
 .section3 .section3-grid .section3-6 {
   background: url(../img/section9.jpeg) center/cover;
-}
-.section3 .section3-grid .section3-6 h2 {
   line-height: 45px;
 }
 @media screen and (max-width: 800px) {
@@ -421,17 +419,17 @@ footer .footer-copyright li {
   padding: 0 8px;
   margin: 4px 0;
 }
+@media screen and (max-width: 800px) {
+  footer .footer-copyright .country {
+    left: 20px;
+    right: 0;
+    top: -20px;
+  }
+}
 footer .footer-copyright .country a {
   color: rgb(97, 97, 100);
   position: absolute;
   top: 0;
   right: 20px;
   font-size: 0.74rem;
-}
-@media screen and (max-width: 800px) {
-  footer .footer-copyright .country a {
-    left: 20px;
-    right: 0;
-    top: -20px;
-  }
 }/*# sourceMappingURL=index.css.map */

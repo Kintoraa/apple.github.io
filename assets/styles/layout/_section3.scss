@@ -1,17 +1,14 @@
 .section3 {
-    padding: 10px;
 
     @media screen and (max-width:700px) {
         
         padding: 10px 0;
         }
+
+    padding: 10px;
+
     
     .section3-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        gap: 10px;
-        color: $white;
 
         @media screen and (max-width:700px) {
             
@@ -19,17 +16,26 @@
             gap: 0;
             row-gap: 10px;
             }
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 10px;
+        color: $white;
+
     
 
         >  div{
-            height: 624px;
-            padding: 70px 0;
 
             @media screen and (max-width:700px) {
             
                 height: 540px;
                 padding: 50px 0;
                 }
+
+            height: 624px;
+            padding: 70px 0;
+
 
             h2 {
                 margin-bottom: -20px;
@@ -91,18 +97,16 @@
             
         }
         .section3-6 {
+            
             background: url(../img/section9.jpeg) center/cover;
-
-
-         
-
+                line-height: 45px;
+                
             h2 {
 
                 @media screen and (max-width:800px) {
                     line-height: 35px;
                  }
 
-                line-height: 45px;
             }
 
             
