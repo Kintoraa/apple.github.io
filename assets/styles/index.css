@@ -68,7 +68,7 @@ h6 {
 .header-text h4 {
   font-size: 1.5rem;
   font-weight: 500;
-  padding: 20px 0;
+  padding: 20px 25px;
 }
 
 nav {
@@ -90,16 +90,27 @@ nav .nav-content {
   height: 44px;
   letter-spacing: 1px;
 }
+@media screen and (max-width: 800px) {
+  nav .nav-content {
+    grid-template-columns: 5% 80% 15%;
+  }
+}
 nav ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media screen and (max-width: 800px) {
+  nav ul {
+    visibility: hidden;
+  }
 }
 nav .nav-left {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.1rem;
+  padding: 0 20px;
 }
 nav .nav_right {
   display: flex;
@@ -116,6 +127,12 @@ header {
   color: white;
   padding: 90px 0;
 }
+@media screen and (max-width: 700px) {
+  header {
+    height: 540px;
+    padding: 60px 0;
+  }
+}
 header h1 {
   font-family: "RobotoB", serif;
   font-size: 2.8rem;
@@ -128,6 +145,12 @@ header h1 {
   height: 700px;
   padding: 90px 0;
   margin: 0 0 10px 0;
+}
+@media screen and (max-width: 700px) {
+  .section1 {
+    height: 540px;
+    padding: 40px 0;
+  }
 }
 .section1 h2 {
   margin-bottom: -15px;
@@ -164,6 +187,11 @@ header h1 {
 .section3 {
   padding: 10px;
 }
+@media screen and (max-width: 700px) {
+  .section3 {
+    padding: 10px 0;
+  }
+}
 .section3 .section3-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -171,9 +199,22 @@ header h1 {
   gap: 10px;
   color: white;
 }
+@media screen and (max-width: 700px) {
+  .section3 .section3-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+    row-gap: 10px;
+  }
+}
 .section3 .section3-grid > div {
   height: 624px;
   padding: 70px 0;
+}
+@media screen and (max-width: 700px) {
+  .section3 .section3-grid > div {
+    height: 540px;
+    padding: 50px 0;
+  }
 }
 .section3 .section3-grid > div h2 {
   margin-bottom: -20px;
@@ -224,6 +265,11 @@ header h1 {
 .section3 .section3-grid .section3-6 h2 {
   line-height: 45px;
 }
+@media screen and (max-width: 800px) {
+  .section3 .section3-grid .section3-6 h2 {
+    line-height: 35px;
+  }
+}
 
 .section4 {
   display: grid;
@@ -231,14 +277,40 @@ header h1 {
   height: 550px;
   gap: 20px;
 }
+@media screen and (max-width: 800px) {
+  .section4 {
+    grid-template-columns: 100%;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 530px) {
+  .section4 {
+    height: 190px;
+  }
+}
 .section4 .background-left {
   background: url(../img/footer2.jpeg) center/cover;
 }
+@media screen and (max-width: 800px) {
+  .section4 .background-left {
+    display: none;
+  }
+}
 .section4 .background-center {
-  background: url(../img/footer1.jpeg) center/cover;
+  background: url(../img/footer1.jpeg) center/cover no-repeat;
+}
+@media screen and (max-width: 800px) {
+  .section4 .background-center {
+    background-size: 100%;
+  }
 }
 .section4 .background-right {
   background: url(../img/footer3.jpeg) center/cover;
+}
+@media screen and (max-width: 800px) {
+  .section4 .background-right {
+    display: none;
+  }
 }
 
 footer {
@@ -256,6 +328,7 @@ footer .footer-content {
 footer .footer-content .mention {
   position: relative;
   padding-bottom: 15px;
+  border-bottom: solid 1px rgba(168, 163, 163, 0.61);
   color: rgb(111, 111, 115);
 }
 footer .footer-content .mention p:first-child {
@@ -264,26 +337,39 @@ footer .footer-content .mention p:first-child {
 footer .footer-content .mention p {
   line-height: 20px;
 }
-footer .footer-content .mention::after {
-  content: "";
-  height: 1px;
-  width: 100%;
-  position: absolute;
-  background: rgba(168, 163, 163, 0.61);
-  bottom: 0;
+footer .footer-content .mention p span {
+  -webkit-text-decoration: underline black;
+          text-decoration: underline black;
+  cursor: pointer;
 }
 footer .footer-content .footer-infos {
   padding: 15px 0;
   position: relative;
   color: rgb(97, 97, 100);
+  border-bottom: solid 1px rgba(168, 163, 163, 0.61);
+}
+@media screen and (max-width: 800px) {
+  footer .footer-content .footer-infos {
+    border-bottom: none;
+  }
 }
 footer .footer-content .footer-infos .footer-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   line-height: 22px;
 }
+@media screen and (max-width: 800px) {
+  footer .footer-content .footer-infos .footer-grid {
+    display: block;
+  }
+}
 footer .footer-content .footer-infos .footer-grid ul {
   padding-bottom: 20px;
+}
+@media screen and (max-width: 800px) {
+  footer .footer-content .footer-infos .footer-grid ul {
+    display: none;
+  }
 }
 footer .footer-content .footer-infos .footer-grid h6 {
   font-size: 0.75rem;
@@ -291,13 +377,20 @@ footer .footer-content .footer-infos .footer-grid h6 {
   font-weight: 900;
   color: rgb(41, 41, 42);
 }
-footer .footer-content .footer-infos .footer-grid::before {
-  content: "";
-  height: 1px;
-  width: 100%;
-  position: absolute;
-  background: rgba(168, 163, 163, 0.61);
-  bottom: 5px;
+@media screen and (max-width: 800px) {
+  footer .footer-content .footer-infos .footer-grid h6 {
+    border-bottom: solid 1px rgba(168, 163, 163, 0.61);
+    padding: 5px 0;
+    position: relative;
+  }
+  footer .footer-content .footer-infos .footer-grid h6::after {
+    content: "+";
+    position: absolute;
+    right: 5px;
+  }
+}
+footer .footer-content .footer-infos p {
+  padding: 8px 0;
 }
 footer .footer-content .footer-infos span {
   color: #06c;
@@ -307,7 +400,7 @@ footer .footer-copyright {
   text-align: left;
   color: rgb(97, 97, 100);
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 7px auto;
   padding: 0px 20px;
   position: relative;
 }
@@ -321,10 +414,12 @@ footer .footer-copyright ul {
   align-items: center;
   font-size: 0.74rem;
   width: 90%;
+  flex-wrap: wrap;
 }
 footer .footer-copyright li {
   border-right: solid 1px;
-  padding-right: 8px;
+  padding: 0 8px;
+  margin: 4px 0;
 }
 footer .footer-copyright .country a {
   color: rgb(97, 97, 100);
@@ -332,4 +427,11 @@ footer .footer-copyright .country a {
   top: 0;
   right: 20px;
   font-size: 0.74rem;
+}
+@media screen and (max-width: 800px) {
+  footer .footer-copyright .country a {
+    left: 20px;
+    right: 0;
+    top: -20px;
+  }
 }/*# sourceMappingURL=index.css.map */

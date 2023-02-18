@@ -4,9 +4,10 @@ nav {
     position: fixed;
     width: 100%;
     z-index: 100;
+
+ 
     .nav-content {
         display: grid;
-       
         grid-template-columns: 10% 80% 10%;
         max-width: 1400px;
         margin: 0 auto;
@@ -14,12 +15,21 @@ nav {
         color: $white;
         font-family: $font2;   
         height: 44px;
-        letter-spacing: 1px
-          
-    }
+        letter-spacing: 1px;
 
+        @media screen and (max-width:800px) {
+            grid-template-columns: 5% 80% 15%;
+         }
+
+
+    }
+   
     ul {
         @include centerChild(space-between);
+
+        @media screen and (max-width:800px) {
+           visibility:hidden;
+        }
       
         
     }
@@ -27,6 +37,7 @@ nav {
     .nav-left {
         @include centerChild(center);
         font-size: 1.1rem;
+        padding: 0 20px;
     }
 
     .nav_right {
