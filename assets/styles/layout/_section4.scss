@@ -1,8 +1,4 @@
 .section4 {
-    display: grid;
-    grid-template-columns: 15% 70% 15%;
-    height: 550px;
-    gap: 20px;
 
     @media screen and (max-width:800px) {
         grid-template-columns: 100%;
@@ -13,12 +9,19 @@
         height: 190px;
         }
 
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    height: 550px;
+    gap: 20px;
+
+
     .background-left {
 
         @media screen and (max-width:800px) {
             display: none;
         
           }
+
         background: url(../img/footer2.jpeg) center/cover;
 
         
@@ -40,8 +43,8 @@
         @media screen and (max-width:800px) {
             display: none;
          }
+         
         background: url(../img/footer3.jpeg) center/cover;
     }
-
 
 }

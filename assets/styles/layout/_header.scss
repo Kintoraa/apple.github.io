@@ -1,14 +1,16 @@
 header {
+
+    @media screen and (max-width:700px) {
+               
+       height: 540px;
+       padding: 60px 0;
+       }
+       
  background: url(../img/header.jpeg) center/cover;
  height: 700px;
  color: $white;
  padding: 90px 0;
 
- @media screen and (max-width:700px) {
-            
-    height: 540px;
-    padding: 60px 0;
-    }
 
  h1 {
     font-family: $font1;

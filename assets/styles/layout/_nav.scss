@@ -7,6 +7,11 @@ nav {
 
  
     .nav-content {
+        
+        @media screen and (max-width:800px) {
+            grid-template-columns: 5% 80% 15%;
+         }
+
         display: grid;
         grid-template-columns: 10% 80% 10%;
         max-width: 1400px;
@@ -17,19 +22,18 @@ nav {
         height: 44px;
         letter-spacing: 1px;
 
-        @media screen and (max-width:800px) {
-            grid-template-columns: 5% 80% 15%;
-         }
 
 
     }
    
     ul {
-        @include centerChild(space-between);
 
         @media screen and (max-width:800px) {
            visibility:hidden;
         }
+
+        @include centerChild(space-between);
+
       
         
     }
