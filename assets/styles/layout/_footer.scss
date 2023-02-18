@@ -139,12 +139,14 @@ footer {
 
         .country {
             
-            @media screen and (max-width:800px) {
-                left: 20px;
-                right: 0;
-                top: -20px;
-            }
             a {
+
+                @media screen and (max-width:800px) {
+                    left: 20px;
+                    right: 0;
+                    top: -20px;
+                }
+                
                 color: $grey2;
                 position: absolute;
                 top: 0;

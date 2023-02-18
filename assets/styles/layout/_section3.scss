@@ -92,24 +92,17 @@
             i:last-child{
                 font-size: 1.1rem;
                }
+            }
         }
 
-            
-        }
-        .section3-6 {
-            
+        .section3-6 { 
             background: url(../img/section9.jpeg) center/cover;
-                line-height: 45px;
+
+            h2{
                 
-            h2 {
-
-                @media screen and (max-width:800px) {
-                    line-height: 35px;
-                 }
-
+                line-height: 37px;
             }
 
-            
         }
     }
 }
